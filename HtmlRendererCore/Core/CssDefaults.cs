@@ -10,7 +10,7 @@
 // - Sun Tsu,
 // "The Art of War"
 
-namespace TheArtOfDev.HtmlRenderer.Core
+namespace HtmlRendererCore.Core
 {
     internal static class CssDefaults
     {

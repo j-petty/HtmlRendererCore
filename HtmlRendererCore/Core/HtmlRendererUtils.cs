@@ -11,10 +11,10 @@
 // "The Art of War"
 
 using System;
-using TheArtOfDev.HtmlRenderer.Adapters;
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
+using HtmlRendererCore.Adapters;
+using HtmlRendererCore.Adapters.Entities;
 
-namespace TheArtOfDev.HtmlRenderer.Core
+namespace HtmlRendererCore.Core
 {
     /// <summary>
     /// General utilities.

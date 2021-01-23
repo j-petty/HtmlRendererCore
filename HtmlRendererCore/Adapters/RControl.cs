@@ -10,10 +10,10 @@
 // - Sun Tsu,
 // "The Art of War"
 
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Utils;
+using HtmlRendererCore.Adapters.Entities;
+using HtmlRendererCore.Core.Utils;
 
-namespace TheArtOfDev.HtmlRenderer.Adapters
+namespace HtmlRendererCore.Adapters
 {
     /// <summary>
     /// Adapter for platform specific control object - used to handle updating the control that the html is rendered on.<br/>

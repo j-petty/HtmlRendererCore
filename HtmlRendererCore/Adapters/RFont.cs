@@ -10,7 +10,7 @@
 // - Sun Tsu,
 // "The Art of War"
 
-namespace TheArtOfDev.HtmlRenderer.Adapters
+namespace HtmlRendererCore.Adapters
 {
     /// <summary>
     /// Adapter for platform specific font object - used to render text using specific font.

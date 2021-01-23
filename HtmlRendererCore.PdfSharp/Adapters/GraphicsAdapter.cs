@@ -12,12 +12,12 @@
 
 using PdfSharpCore.Drawing;
 using System;
-using TheArtOfDev.HtmlRenderer.Adapters;
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Utils;
-using TheArtOfDev.HtmlRenderer.PdfSharp.Utilities;
+using HtmlRendererCore.Adapters;
+using HtmlRendererCore.Adapters.Entities;
+using HtmlRendererCore.Core.Utils;
+using HtmlRendererCore.PdfSharp.Utilities;
 
-namespace TheArtOfDev.HtmlRenderer.PdfSharp.Adapters
+namespace HtmlRendererCore.PdfSharp.Adapters
 {
     /// <summary>
     /// Adapter for WinForms Graphics for core.

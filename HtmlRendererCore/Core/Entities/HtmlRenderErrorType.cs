@@ -10,7 +10,7 @@
 // - Sun Tsu,
 // "The Art of War"
 
-namespace TheArtOfDev.HtmlRenderer.Core.Entities
+namespace HtmlRendererCore.Core.Entities
 {
     /// <summary>
     /// Enum of possible error types that can be reported.

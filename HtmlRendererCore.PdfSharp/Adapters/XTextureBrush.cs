@@ -12,7 +12,7 @@
 
 using PdfSharpCore.Drawing;
 
-namespace TheArtOfDev.HtmlRenderer.PdfSharp.Adapters
+namespace HtmlRendererCore.PdfSharp.Adapters
 {
     /// <summary>
     /// Because PdfSharp doesn't support texture brush we need to implement it ourselves.

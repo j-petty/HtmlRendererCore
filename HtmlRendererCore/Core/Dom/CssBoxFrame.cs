@@ -14,13 +14,13 @@ using System;
 using System.Net;
 using System.Text;
 using System.Threading;
-using TheArtOfDev.HtmlRenderer.Adapters;
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Handlers;
-using TheArtOfDev.HtmlRenderer.Core.Utils;
+using HtmlRendererCore.Adapters;
+using HtmlRendererCore.Adapters.Entities;
+using HtmlRendererCore.Core.Entities;
+using HtmlRendererCore.Core.Handlers;
+using HtmlRendererCore.Core.Utils;
 
-namespace TheArtOfDev.HtmlRenderer.Core.Dom
+namespace HtmlRendererCore.Core.Dom
 {
     /// <summary>
     /// CSS box for iframe element.<br/>

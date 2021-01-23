@@ -13,7 +13,7 @@
 using PdfSharpCore;
 using PdfSharpCore.Drawing;
 
-namespace TheArtOfDev.HtmlRenderer.PdfSharp
+namespace HtmlRendererCore.PdfSharp
 {
     /// <summary>
     /// The settings for generating PDF using <see cref="PdfGenerator"/>

@@ -10,11 +10,11 @@
 // - Sun Tsu,
 // "The Art of War"
 
-using TheArtOfDev.HtmlRenderer.Adapters;
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Handlers;
+using HtmlRendererCore.Adapters;
+using HtmlRendererCore.Adapters.Entities;
+using HtmlRendererCore.Core.Handlers;
 
-namespace TheArtOfDev.HtmlRenderer.Core.Dom
+namespace HtmlRendererCore.Core.Dom
 {
     /// <summary>
     /// Represents a word inside an inline box

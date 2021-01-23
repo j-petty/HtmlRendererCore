@@ -12,13 +12,13 @@
 
 using System;
 using System.Globalization;
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Dom;
-using TheArtOfDev.HtmlRenderer.Core.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Handlers;
-using TheArtOfDev.HtmlRenderer.Core.Utils;
+using HtmlRendererCore.Adapters.Entities;
+using HtmlRendererCore.Core.Dom;
+using HtmlRendererCore.Core.Entities;
+using HtmlRendererCore.Core.Handlers;
+using HtmlRendererCore.Core.Utils;
 
-namespace TheArtOfDev.HtmlRenderer.Core.Parse
+namespace HtmlRendererCore.Core.Parse
 {
     /// <summary>
     /// Handle css DOM tree generation from raw html and stylesheet.

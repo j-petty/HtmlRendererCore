@@ -14,13 +14,13 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using TheArtOfDev.HtmlRenderer.Adapters.Entities;
-using TheArtOfDev.HtmlRenderer.Core;
-using TheArtOfDev.HtmlRenderer.Core.Entities;
-using TheArtOfDev.HtmlRenderer.Core.Handlers;
-using TheArtOfDev.HtmlRenderer.Core.Utils;
+using HtmlRendererCore.Adapters.Entities;
+using HtmlRendererCore.Core;
+using HtmlRendererCore.Core.Entities;
+using HtmlRendererCore.Core.Handlers;
+using HtmlRendererCore.Core.Utils;
 
-namespace TheArtOfDev.HtmlRenderer.Adapters
+namespace HtmlRendererCore.Adapters
 {
     /// <summary>
     /// Platform adapter to bridge platform specific objects to HTML Renderer core library.<br/>
@@ -213,7 +213,7 @@ namespace TheArtOfDev.HtmlRenderer.Adapters
         {
             if (_loadImage == null)
             {
-                var stream = typeof(HtmlRendererUtils).Assembly.GetManifestResourceStream("TheArtOfDev.HtmlRenderer.Core.Utils.ImageLoad.png");
+                var stream = typeof(HtmlRendererUtils).Assembly.GetManifestResourceStream("HtmlRendererCore.Core.Utils.ImageLoad.png");
                 if (stream != null)
                     _loadImage = ImageFromStream(stream);
             }
@@ -227,7 +227,7 @@ namespace TheArtOfDev.HtmlRenderer.Adapters
         {
             if (_errorImage == null)
             {
-                var stream = typeof(HtmlRendererUtils).Assembly.GetManifestResourceStream("TheArtOfDev.HtmlRenderer.Core.Utils.ImageError.png");
+                var stream = typeof(HtmlRendererUtils).Assembly.GetManifestResourceStream("HtmlRendererCore.Core.Utils.ImageError.png");
                 if (stream != null)
                     _errorImage = ImageFromStream(stream);
             }

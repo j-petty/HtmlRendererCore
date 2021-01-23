@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using TheArtOfDev.HtmlRenderer.PdfSharp;
+using HtmlRendererCore.PdfSharp;
 
 namespace HtmlRendererCore.Demo.PdfSharp
 {
