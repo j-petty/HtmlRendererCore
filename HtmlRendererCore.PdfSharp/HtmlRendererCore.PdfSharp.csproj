@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/j-petty/HtmlRendererCore</RepositoryUrl>
     <Description>HtmlRendererCore is a partial port of HtmlRenderer for .NET Core.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
