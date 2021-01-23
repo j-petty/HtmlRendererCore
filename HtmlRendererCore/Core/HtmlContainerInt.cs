@@ -1,16 +1,4 @@
-﻿// "Therefore those skilled at the unorthodox
-// are infinite as heaven and earth,
-// inexhaustible as the great rivers.
-// When they come to an end,
-// they begin again,
-// like the days and months;
-// they die and are reborn,
-// like the four seasons."
-// 
-// - Sun Tsu,
-// "The Art of War"
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using HtmlRendererCore.Adapters;
@@ -125,33 +113,6 @@ namespace HtmlRendererCore.Core
         /// the parsed stylesheet data used for handling the html
         /// </summary>
         private CssData _cssData;
-
-        /// <summary>
-        /// Is content selection is enabled for the rendered html (default - true).<br/>
-        /// If set to 'false' the rendered html will be static only with ability to click on links.
-        /// </summary>
-        private bool _isSelectionEnabled = true;
-
-        /// <summary>
-        /// Is the build-in context menu enabled (default - true)
-        /// </summary>
-        private bool _isContextMenuEnabled = true;
-
-        /// <summary>
-        /// Gets or sets a value indicating if anti-aliasing should be avoided 
-        /// for geometry like backgrounds and borders
-        /// </summary>
-        private bool _avoidGeometryAntialias;
-
-        /// <summary>
-        /// Gets or sets a value indicating if image asynchronous loading should be avoided (default - false).<br/>
-        /// </summary>
-        private bool _avoidAsyncImagesLoading;
-
-        /// <summary>
-        /// Gets or sets a value indicating if image loading only when visible should be avoided (default - false).<br/>
-        /// </summary>
-        private bool _avoidImagesLateLoading;
 
         /// <summary>
         /// is the load of the html document is complete
@@ -287,11 +248,7 @@ namespace HtmlRendererCore.Core
         /// <summary>
         /// Gets or sets a value indicating if anti-aliasing should be avoided for geometry like backgrounds and borders (default - false).
         /// </summary>
-        public bool AvoidGeometryAntialias
-        {
-            get { return _avoidGeometryAntialias; }
-            set { _avoidGeometryAntialias = value; }
-        }
+        public bool AvoidGeometryAntialias { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating if image asynchronous loading should be avoided (default - false).<br/>
@@ -303,11 +260,7 @@ namespace HtmlRendererCore.Core
         /// ports to achieve better performance.<br/>
         /// Asynchronously image loading should be avoided when the full html content must be available during render, like render to image.
         /// </remarks>
-        public bool AvoidAsyncImagesLoading
-        {
-            get { return _avoidAsyncImagesLoading; }
-            set { _avoidAsyncImagesLoading = value; }
-        }
+        public bool AvoidAsyncImagesLoading { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating if image loading only when visible should be avoided (default - false).<br/>
@@ -322,30 +275,18 @@ namespace HtmlRendererCore.Core
         /// Early image loading may also effect the layout if image without known size above the current scroll location are loaded as they
         /// will push the html elements down.
         /// </remarks>
-        public bool AvoidImagesLateLoading
-        {
-            get { return _avoidImagesLateLoading; }
-            set { _avoidImagesLateLoading = value; }
-        }
+        public bool AvoidImagesLateLoading { get; set; }
 
         /// <summary>
         /// Is content selection is enabled for the rendered html (default - true).<br/>
         /// If set to 'false' the rendered html will be static only with ability to click on links.
         /// </summary>
-        public bool IsSelectionEnabled
-        {
-            get { return _isSelectionEnabled; }
-            set { _isSelectionEnabled = value; }
-        }
+        public bool IsSelectionEnabled { get; set; } = true;
 
         /// <summary>
         /// Is the build-in context menu enabled and will be shown on mouse right click (default - true)
         /// </summary>
-        public bool IsContextMenuEnabled
-        {
-            get { return _isContextMenuEnabled; }
-            set { _isContextMenuEnabled = value; }
-        }
+        public bool IsContextMenuEnabled { get; set; } = true;
 
         /// <summary>
         /// The scroll offset of the html.<br/>

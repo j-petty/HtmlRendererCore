@@ -1,16 +1,4 @@
-﻿// "Therefore those skilled at the unorthodox
-// are infinite as heaven and earth,
-// inexhaustible as the great rivers.
-// When they come to an end,
-// they begin again,
-// like the days and months;
-// they die and are reborn,
-// like the four seasons."
-// 
-// - Sun Tsu,
-// "The Art of War"
-
-using PdfSharpCore;
+﻿using PdfSharpCore;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
 using System;
@@ -21,9 +9,6 @@ using HtmlRendererCore.PdfSharp.Adapters;
 
 namespace HtmlRendererCore.PdfSharp
 {
-    /// <summary>
-    /// TODO:a add doc
-    /// </summary>
     public static class PdfGenerator
     {
         /// <summary>
