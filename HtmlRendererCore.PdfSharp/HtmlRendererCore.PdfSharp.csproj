@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>James Petty</Authors>
+    <Product>HtmlRendererCore</Product>
+    <Copyright />
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/j-petty/HtmlRendererCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/j-petty/HtmlRendererCore</RepositoryUrl>
+    <Description>HtmlRendererCore is a partial port of HtmlRenderer for .NET Core.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
