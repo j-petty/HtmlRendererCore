@@ -3,18 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{E263EA16-2E6A-4269-A319-AA2F97ADA8E1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore.PdfSharp", "HtmlRendererCore.PdfSharp\HtmlRendererCore.PdfSharp.csproj", "{CA16111D-A954-4B64-9F30-B918C6942733}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore", "HtmlRendererCore\HtmlRendererCore.csproj", "{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore.Demo.PdfSharp", "Demo\PdfSharp\HtmlRendererCore.Demo.PdfSharp.csproj", "{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70EF907B-FC9E-48B5-BACB-14F01CBF236A}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlRendererCore.PdfSharp.Tests", "HtmlRendererCore.PdfSharp.Tests\HtmlRendererCore.PdfSharp.Tests.csproj", "{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,24 +48,21 @@ Global
 		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|x86.ActiveCfg = Release|Any CPU
 		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|x86.Build.0 = Release|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Debug|x86.Build.0 = Debug|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Release|x86.ActiveCfg = Release|Any CPU
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD}.Release|x86.Build.0 = Release|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|x86.Build.0 = Debug|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{5FC08938-5D3C-444E-A3FC-76D4E4E5E4DD} = {E263EA16-2E6A-4269-A319-AA2F97ADA8E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8A80A41-B9BB-4011-8CB2-FC2D561D53CD}
