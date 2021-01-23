@@ -1,11 +1,11 @@
 # HtmlRendererCore
+[![NuGet version (HtmlRendererCore.PdfSharp)](https://img.shields.io/nuget/v/HtmlRendererCore.PdfSharp.svg?style=flat-square)](https://www.nuget.org/packages/HtmlRendererCore.PdfSharp/)
 
 **HtmlRendererCore** is a partial port of [HtmlRenderer](https://github.com/ArthurHub/HTML-Renderer) for .NET Core.
 
 This library offers Html to Pdf parsing for .Net Core projects using [PdfSharpCore](https://github.com/ststeiger/PdfSharpCore).
 
 Future updates will be focused at cleaning up the codebase and offering support for more advanced HTML rendering. Public pull requests welcome.
-
 
 ## Example usage 
 

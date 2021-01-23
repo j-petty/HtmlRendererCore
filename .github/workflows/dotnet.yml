@@ -30,3 +30,4 @@ jobs:
         PROJECT_FILE_PATH: HtmlRendererCore.PdfSharp/HtmlRendererCore.PdfSharp.csproj
         # API key to authenticate with NuGet server
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        PACKAGE_NAME: HtmlRendererCore.PdfSharp

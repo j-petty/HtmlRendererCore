@@ -9,10 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore", "HtmlRen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70EF907B-FC9E-48B5-BACB-14F01CBF236A}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlRendererCore.PdfSharp.Tests", "HtmlRendererCore.PdfSharp.Tests\HtmlRendererCore.PdfSharp.Tests.csproj", "{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore.PdfSharp.Tests", "HtmlRendererCore.PdfSharp.Tests\HtmlRendererCore.PdfSharp.Tests.csproj", "{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
