@@ -60,8 +60,6 @@ namespace HtmlRendererCore.Core.Dom
 
         protected bool _wordsSizeMeasured;
         private CssBox _listItemBox;
-        private CssLineBox _firstHostingLineBox;
-        private CssLineBox _lastHostingLineBox;
 
         /// <summary>
         /// handler for loading background image
@@ -220,7 +218,7 @@ namespace HtmlRendererCore.Core.Dom
 
                 //Comment this following line to treat always superior box as block
                 if (box == null)
-                    throw new Exception("There's no containing block on the chain");
+                    throw new InvalidOperationException("There's no containing block on the chain");
 
                 return box;
             }
@@ -319,20 +317,12 @@ namespace HtmlRendererCore.Core.Dom
         /// <summary>
         /// Gets or sets the first linebox where content of this box appear
         /// </summary>
-        internal CssLineBox FirstHostingLineBox
-        {
-            get { return _firstHostingLineBox; }
-            set { _firstHostingLineBox = value; }
-        }
+        internal CssLineBox FirstHostingLineBox { get; set; }
 
         /// <summary>
         /// Gets or sets the last linebox where content of this box appear
         /// </summary>
-        internal CssLineBox LastHostingLineBox
-        {
-            get { return _lastHostingLineBox; }
-            set { _lastHostingLineBox = value; }
-        }
+        internal CssLineBox LastHostingLineBox { get; set; }
 
         /// <summary>
         /// Create new css box for the given parent with the given html tag.<br/>

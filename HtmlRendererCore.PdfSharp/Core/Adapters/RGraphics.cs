@@ -27,7 +27,7 @@ namespace HtmlRendererCore.Adapters
         /// <summary>
         /// The suspended clips
         /// </summary>
-        private Stack<RRect> _suspendedClips = new Stack<RRect>();
+        private readonly Stack<RRect> _suspendedClips = new Stack<RRect>();
 
         #endregion
 

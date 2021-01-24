@@ -12,21 +12,6 @@ namespace HtmlRendererCore.PdfSharp
         #region Fields/Consts
 
         /// <summary>
-        /// the page size to use for each page in the generated pdf
-        /// </summary>
-        private PageSize _pageSize;
-
-        /// <summary>
-        /// if the page size is undefined this allow you to set manually the page size
-        /// </summary>
-        private XSize _xsize;
-
-        /// <summary>
-        /// the orientation of each page of the generated pdf
-        /// </summary>
-        private PageOrientation _pageOrientation;
-
-        /// <summary>
         /// the top margin between the page start and the text
         /// </summary>
         private int _marginTop;
@@ -52,28 +37,17 @@ namespace HtmlRendererCore.PdfSharp
         /// <summary>
         /// the page size to use for each page in the generated pdf
         /// </summary>
-        public PageSize PageSize
-        {
-            get { return _pageSize; }
-            set { _pageSize = value; }
-        }
+        public PageSize PageSize { get; set; }
 
         /// <summary>
         /// if the page size is undefined this allow you to set manually the page size
         /// </summary>
-        public XSize ManualPageSize {
-            get { return _xsize; }
-            set { _xsize = value; }
-        }
+        public XSize ManualPageSize { get; set; }
 
         /// <summary>
         /// the orientation of each page of the generated pdf
         /// </summary>
-        public PageOrientation PageOrientation
-        {
-            get { return _pageOrientation; }
-            set { _pageOrientation = value; }
-        }
+        public PageOrientation PageOrientation { get; set; }
 
         /// <summary>
         /// the top margin between the page start and the text

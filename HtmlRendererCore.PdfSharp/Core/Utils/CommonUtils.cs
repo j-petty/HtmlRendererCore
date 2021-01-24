@@ -69,7 +69,7 @@ namespace HtmlRendererCore.Core.Utils
         /// <summary>
         /// the temp path to use for local files
         /// </summary>
-        public static String _tempPath;
+        private static string _tempPath;
 
         #endregion
 

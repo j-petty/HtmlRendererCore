@@ -162,7 +162,6 @@ namespace HtmlRendererCore.PdfSharp
 
                         using (var g = XGraphics.FromPdfPage(page))
                         {
-                            //g.IntersectClip(new XRect(config.MarginLeft, config.MarginTop, pageSize.Width, pageSize.Height));
                             g.IntersectClip(new XRect(0, 0, page.Width, page.Height));
 
                             container.ScrollOffset = new XPoint(0, scrollOffset);

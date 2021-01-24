@@ -14,12 +14,6 @@ namespace HtmlRendererCore.Adapters.Entities
         /// </summary>
         public static readonly RRect Empty = new RRect();
 
-        private double _height;
-        private double _width;
-
-        private double _x;
-        private double _y;
-
         #endregion
 
 
@@ -32,10 +26,10 @@ namespace HtmlRendererCore.Adapters.Entities
         /// <param name="height">The height of the rectangle. </param>
         public RRect(double x, double y, double width, double height)
         {
-            _x = x;
-            _y = y;
-            _width = width;
-            _height = height;
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
         }
 
         /// <summary>
@@ -45,10 +39,10 @@ namespace HtmlRendererCore.Adapters.Entities
         /// <param name="size">A <see cref="RSize" /> that represents the width and height of the rectangular region.</param>
         public RRect(RPoint location, RSize size)
         {
-            _x = location.X;
-            _y = location.Y;
-            _width = size.Width;
-            _height = size.Height;
+            X = location.X;
+            Y = location.Y;
+            Width = size.Width;
+            Height = size.Height;
         }
 
         /// <summary>
@@ -85,11 +79,7 @@ namespace HtmlRendererCore.Adapters.Entities
         /// <returns>
         ///     The x-coordinate of the upper-left corner of this <see cref="RRect" /> structure.
         /// </returns>
-        public double X
-        {
-            get { return _x; }
-            set { _x = value; }
-        }
+        public double X { get; set; }
 
         /// <summary>
         ///     Gets or sets the y-coordinate of the upper-left corner of this <see cref="RRect" /> structure.
@@ -97,11 +87,7 @@ namespace HtmlRendererCore.Adapters.Entities
         /// <returns>
         ///     The y-coordinate of the upper-left corner of this <see cref="RRect" /> structure.
         /// </returns>
-        public double Y
-        {
-            get { return _y; }
-            set { _y = value; }
-        }
+        public double Y { get; set; }
 
         /// <summary>
         ///     Gets or sets the width of this <see cref="RRect" /> structure.
@@ -109,11 +95,7 @@ namespace HtmlRendererCore.Adapters.Entities
         /// <returns>
         ///     The width of this <see cref="RRect" /> structure.
         /// </returns>
-        public double Width
-        {
-            get { return _width; }
-            set { _width = value; }
-        }
+        public double Width { get; set; }
 
         /// <summary>
         ///     Gets or sets the height of this <see cref="RRect" /> structure.
@@ -121,11 +103,7 @@ namespace HtmlRendererCore.Adapters.Entities
         /// <returns>
         ///     The height of this <see cref="RRect" /> structure.
         /// </returns>
-        public double Height
-        {
-            get { return _height; }
-            set { _height = value; }
-        }
+        public double Height { get; set; }
 
         /// <summary>
         ///     Gets the x-coordinate of the left edge of this <see cref="RRect" /> structure.

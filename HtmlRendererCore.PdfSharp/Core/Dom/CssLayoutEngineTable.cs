@@ -947,7 +947,7 @@ namespace HtmlRendererCore.Core.Dom
             foreach (double t in _columnWidths)
             {
                 if (double.IsNaN(t))
-                    throw new Exception("CssTable Algorithm error: There's a NaN in column widths");
+                    throw new InvalidOperationException("CssTable Algorithm error: There's a NaN in column widths");
                 else
                     f += t;
             }
