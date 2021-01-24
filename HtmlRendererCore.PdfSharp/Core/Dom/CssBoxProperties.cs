@@ -19,12 +19,6 @@ namespace HtmlRendererCore.Core.Dom
     {
         #region CSS Fields
 
-        private string _backgroundColor = "transparent";
-        private string _backgroundGradient = "none";
-        private string _backgroundGradientAngle = "90";
-        private string _backgroundImage = "none";
-        private string _backgroundPosition = "0% 0%";
-        private string _backgroundRepeat = "repeat";
         private string _borderTopWidth = "medium";
         private string _borderRightWidth = "medium";
         private string _borderBottomWidth = "medium";
@@ -33,59 +27,20 @@ namespace HtmlRendererCore.Core.Dom
         private string _borderRightColor = "black";
         private string _borderBottomColor = "black";
         private string _borderLeftColor = "black";
-        private string _borderTopStyle = "none";
-        private string _borderRightStyle = "none";
-        private string _borderBottomStyle = "none";
-        private string _borderLeftStyle = "none";
-        private string _borderSpacing = "0";
-        private string _borderCollapse = "separate";
         private string _bottom;
         private string _color = "black";
-        private string _content = "normal";
-        private string _cornerNwRadius = "0";
-        private string _cornerNeRadius = "0";
-        private string _cornerSeRadius = "0";
-        private string _cornerSwRadius = "0";
         private string _cornerRadius = "0";
-        private string _emptyCells = "show";
-        private string _direction = "ltr";
-        private string _display = "inline";
-        private string _fontFamily;
         private string _fontSize = "medium";
-        private string _fontStyle = "normal";
-        private string _fontVariant = "normal";
-        private string _fontWeight = "normal";
-        private string _float = "none";
-        private string _height = "auto";
-        private string _marginBottom = "0";
-        private string _marginLeft = "0";
-        private string _marginRight = "0";
-        private string _marginTop = "0";
         private string _left = "auto";
         private string _lineHeight = "normal";
-        private string _listStyleType = "disc";
-        private string _listStyleImage = string.Empty;
-        private string _listStylePosition = "outside";
-        private string _listStyle = string.Empty;
-        private string _overflow = "visible";
         private string _paddingLeft = "0";
         private string _paddingBottom = "0";
         private string _paddingRight = "0";
         private string _paddingTop = "0";
-        private string _pageBreakInside = CssConstants.Auto;
         private string _right;
-        private string _textAlign = string.Empty;
-        private string _textDecoration = string.Empty;
         private string _textIndent = "0";
         private string _top = "auto";
-        private string _position = "static";
-        private string _verticalAlign = "baseline";
-        private string _width = "auto";
-        private string _maxWidth = "none";
         private string _wordSpacing = "normal";
-        private string _wordBreak = "normal";
-        private string _whiteSpace = "normal";
-        private string _visibility = "visible";
 
         #endregion
 
@@ -152,7 +107,7 @@ namespace HtmlRendererCore.Core.Dom
             set
             {
                 _borderBottomWidth = value;
-                _actualBorderBottomWidth = Single.NaN;
+                _actualBorderBottomWidth = float.NaN;
             }
         }
 
@@ -162,7 +117,7 @@ namespace HtmlRendererCore.Core.Dom
             set
             {
                 _borderLeftWidth = value;
-                _actualBorderLeftWidth = Single.NaN;
+                _actualBorderLeftWidth = float.NaN;
             }
         }
 
@@ -172,7 +127,7 @@ namespace HtmlRendererCore.Core.Dom
             set
             {
                 _borderRightWidth = value;
-                _actualBorderRightWidth = Single.NaN;
+                _actualBorderRightWidth = float.NaN;
             }
         }
 
@@ -182,33 +137,17 @@ namespace HtmlRendererCore.Core.Dom
             set
             {
                 _borderTopWidth = value;
-                _actualBorderTopWidth = Single.NaN;
+                _actualBorderTopWidth = float.NaN;
             }
         }
 
-        public string BorderBottomStyle
-        {
-            get { return _borderBottomStyle; }
-            set { _borderBottomStyle = value; }
-        }
+        public string BorderBottomStyle { get; set; } = "none";
 
-        public string BorderLeftStyle
-        {
-            get { return _borderLeftStyle; }
-            set { _borderLeftStyle = value; }
-        }
+        public string BorderLeftStyle { get; set; } = "none";
 
-        public string BorderRightStyle
-        {
-            get { return _borderRightStyle; }
-            set { _borderRightStyle = value; }
-        }
+        public string BorderRightStyle { get; set; } = "none";
 
-        public string BorderTopStyle
-        {
-            get { return _borderTopStyle; }
-            set { _borderTopStyle = value; }
-        }
+        public string BorderTopStyle { get; set; } = "none";
 
         public string BorderBottomColor
         {
@@ -250,17 +189,9 @@ namespace HtmlRendererCore.Core.Dom
             }
         }
 
-        public string BorderSpacing
-        {
-            get { return _borderSpacing; }
-            set { _borderSpacing = value; }
-        }
+        public string BorderSpacing { get; set; } = "0";
 
-        public string BorderCollapse
-        {
-            get { return _borderCollapse; }
-            set { _borderCollapse = value; }
-        }
+        public string BorderCollapse { get; set; } = "separate";
 
         public string CornerRadius
         {
@@ -300,53 +231,21 @@ namespace HtmlRendererCore.Core.Dom
             }
         }
 
-        public string CornerNwRadius
-        {
-            get { return _cornerNwRadius; }
-            set { _cornerNwRadius = value; }
-        }
+        public string CornerNwRadius { get; set; } = "0";
 
-        public string CornerNeRadius
-        {
-            get { return _cornerNeRadius; }
-            set { _cornerNeRadius = value; }
-        }
+        public string CornerNeRadius { get; set; } = "0";
 
-        public string CornerSeRadius
-        {
-            get { return _cornerSeRadius; }
-            set { _cornerSeRadius = value; }
-        }
+        public string CornerSeRadius { get; set; } = "0";
 
-        public string CornerSwRadius
-        {
-            get { return _cornerSwRadius; }
-            set { _cornerSwRadius = value; }
-        }
+        public string CornerSwRadius { get; set; } = "0";
 
-        public string MarginBottom
-        {
-            get { return _marginBottom; }
-            set { _marginBottom = value; }
-        }
+        public string MarginBottom { get; set; } = "0";
 
-        public string MarginLeft
-        {
-            get { return _marginLeft; }
-            set { _marginLeft = value; }
-        }
+        public string MarginLeft { get; set; } = "0";
 
-        public string MarginRight
-        {
-            get { return _marginRight; }
-            set { _marginRight = value; }
-        }
+        public string MarginRight { get; set; } = "0";
 
-        public string MarginTop
-        {
-            get { return _marginTop; }
-            set { _marginTop = value; }
-        }
+        public string MarginTop { get; set; } = "0";
 
         public string PaddingBottom
         {
@@ -388,14 +287,7 @@ namespace HtmlRendererCore.Core.Dom
             }
         }
 
-        public string PageBreakInside
-        {
-            get { return _pageBreakInside; }
-            set
-            {
-                _pageBreakInside = value;
-            }
-        }
+        public string PageBreakInside { get; set; } = CssConstants.Auto;
 
         public string Left
         {
@@ -425,59 +317,23 @@ namespace HtmlRendererCore.Core.Dom
             }
         }
 
-        public string Width
-        {
-            get { return _width; }
-            set { _width = value; }
-        }
+        public string Width { get; set; } = "auto";
 
-        public string MaxWidth
-        {
-            get { return _maxWidth; }
-            set { _maxWidth = value; }
-        }
+        public string MaxWidth { get; set; } = "none";
 
-        public string Height
-        {
-            get { return _height; }
-            set { _height = value; }
-        }
+        public string Height { get; set; } = "auto";
 
-        public string BackgroundColor
-        {
-            get { return _backgroundColor; }
-            set { _backgroundColor = value; }
-        }
+        public string BackgroundColor { get; set; } = "transparent";
 
-        public string BackgroundImage
-        {
-            get { return _backgroundImage; }
-            set { _backgroundImage = value; }
-        }
+        public string BackgroundImage { get; set; } = "none";
 
-        public string BackgroundPosition
-        {
-            get { return _backgroundPosition; }
-            set { _backgroundPosition = value; }
-        }
+        public string BackgroundPosition { get; set; } = "0% 0%";
 
-        public string BackgroundRepeat
-        {
-            get { return _backgroundRepeat; }
-            set { _backgroundRepeat = value; }
-        }
+        public string BackgroundRepeat { get; set; } = "repeat";
 
-        public string BackgroundGradient
-        {
-            get { return _backgroundGradient; }
-            set { _backgroundGradient = value; }
-        }
+        public string BackgroundGradient { get; set; } = "none";
 
-        public string BackgroundGradientAngle
-        {
-            get { return _backgroundGradientAngle; }
-            set { _backgroundGradientAngle = value; }
-        }
+        public string BackgroundGradientAngle { get; set; } = "90";
 
         public string Color
         {
@@ -489,41 +345,17 @@ namespace HtmlRendererCore.Core.Dom
             }
         }
 
-        public string Content
-        {
-            get { return _content; }
-            set { _content = value; }
-        }
+        public string Content { get; set; } = "normal";
 
-        public string Display
-        {
-            get { return _display; }
-            set { _display = value; }
-        }
+        public string Display { get; set; } = "inline";
 
-        public string Direction
-        {
-            get { return _direction; }
-            set { _direction = value; }
-        }
+        public string Direction { get; set; } = "ltr";
 
-        public string EmptyCells
-        {
-            get { return _emptyCells; }
-            set { _emptyCells = value; }
-        }
+        public string EmptyCells { get; set; } = "show";
 
-        public string Float
-        {
-            get { return _float; }
-            set { _float = value; }
-        }
+        public string Float { get; set; } = "none";
 
-        public string Position
-        {
-            get { return _position; }
-            set { _position = value; }
-        }
+        public string Position { get; set; } = "static";
 
         public string LineHeight
         {
@@ -531,11 +363,7 @@ namespace HtmlRendererCore.Core.Dom
             set { _lineHeight = string.Format(NumberFormatInfo.InvariantInfo, "{0}px", CssValueParser.ParseLength(value, Size.Height, this, CssConstants.Em)); }
         }
 
-        public string VerticalAlign
-        {
-            get { return _verticalAlign; }
-            set { _verticalAlign = value; }
-        }
+        public string VerticalAlign { get; set; } = "baseline";
 
         public string TextIndent
         {
@@ -543,29 +371,13 @@ namespace HtmlRendererCore.Core.Dom
             set { _textIndent = NoEms(value); }
         }
 
-        public string TextAlign
-        {
-            get { return _textAlign; }
-            set { _textAlign = value; }
-        }
+        public string TextAlign { get; set; } = string.Empty;
 
-        public string TextDecoration
-        {
-            get { return _textDecoration; }
-            set { _textDecoration = value; }
-        }
+        public string TextDecoration { get; set; } = string.Empty;
 
-        public string WhiteSpace
-        {
-            get { return _whiteSpace; }
-            set { _whiteSpace = value; }
-        }
+        public string WhiteSpace { get; set; } = "normal";
 
-        public string Visibility
-        {
-            get { return _visibility; }
-            set { _visibility = value; }
-        }
+        public string Visibility { get; set; } = "visible";
 
         public string WordSpacing
         {
@@ -573,17 +385,9 @@ namespace HtmlRendererCore.Core.Dom
             set { _wordSpacing = NoEms(value); }
         }
 
-        public string WordBreak
-        {
-            get { return _wordBreak; }
-            set { _wordBreak = value; }
-        }
+        public string WordBreak { get; set; } = "normal";
 
-        public string FontFamily
-        {
-            get { return _fontFamily; }
-            set { _fontFamily = value; }
-        }
+        public string FontFamily { get; set; }
 
         public string FontSize
         {
@@ -619,53 +423,21 @@ namespace HtmlRendererCore.Core.Dom
             }
         }
 
-        public string FontStyle
-        {
-            get { return _fontStyle; }
-            set { _fontStyle = value; }
-        }
+        public string FontStyle { get; set; } = "normal";
 
-        public string FontVariant
-        {
-            get { return _fontVariant; }
-            set { _fontVariant = value; }
-        }
+        public string FontVariant { get; set; } = "normal";
 
-        public string FontWeight
-        {
-            get { return _fontWeight; }
-            set { _fontWeight = value; }
-        }
+        public string FontWeight { get; set; } = "normal";
 
-        public string ListStyle
-        {
-            get { return _listStyle; }
-            set { _listStyle = value; }
-        }
+        public string ListStyle { get; set; } = string.Empty;
 
-        public string Overflow
-        {
-            get { return _overflow; }
-            set { _overflow = value; }
-        }
+        public string Overflow { get; set; } = "visible";
 
-        public string ListStylePosition
-        {
-            get { return _listStylePosition; }
-            set { _listStylePosition = value; }
-        }
+        public string ListStylePosition { get; set; } = "outside";
 
-        public string ListStyleImage
-        {
-            get { return _listStyleImage; }
-            set { _listStyleImage = value; }
-        }
+        public string ListStyleImage { get; set; } = string.Empty;
 
-        public string ListStyleType
-        {
-            get { return _listStyleType; }
-            set { _listStyleType = value; }
-        }
+        public string ListStyleType { get; set; } = "disc";
 
         #endregion CSS Propertier
 
@@ -677,9 +449,6 @@ namespace HtmlRendererCore.Core.Dom
             get {
                 if (_location.IsEmpty && Position == CssConstants.Fixed)
                 {
-                    var left = Left;
-                    var top = Top;
-
                     _location = GetActualLocation(Left, Top);
                 }
                 return _location;
@@ -1479,36 +1248,36 @@ namespace HtmlRendererCore.Core.Dom
         {
             if (p != null)
             {
-                _borderSpacing = p._borderSpacing;
-                _borderCollapse = p._borderCollapse;
+                BorderSpacing = p.BorderSpacing;
+                BorderCollapse = p.BorderCollapse;
                 _color = p._color;
-                _emptyCells = p._emptyCells;
-                _whiteSpace = p._whiteSpace;
-                _visibility = p._visibility;
+                EmptyCells = p.EmptyCells;
+                WhiteSpace = p.WhiteSpace;
+                Visibility = p.Visibility;
                 _textIndent = p._textIndent;
-                _textAlign = p._textAlign;
-                _verticalAlign = p._verticalAlign;
-                _fontFamily = p._fontFamily;
+                TextAlign = p.TextAlign;
+                VerticalAlign = p.VerticalAlign;
+                FontFamily = p.FontFamily;
                 _fontSize = p._fontSize;
-                _fontStyle = p._fontStyle;
-                _fontVariant = p._fontVariant;
-                _fontWeight = p._fontWeight;
-                _listStyleImage = p._listStyleImage;
-                _listStylePosition = p._listStylePosition;
-                _listStyleType = p._listStyleType;
-                _listStyle = p._listStyle;
+                FontStyle = p.FontStyle;
+                FontVariant = p.FontVariant;
+                FontWeight = p.FontWeight;
+                ListStyleImage = p.ListStyleImage;
+                ListStylePosition = p.ListStylePosition;
+                ListStyleType = p.ListStyleType;
+                ListStyle = p.ListStyle;
                 _lineHeight = p._lineHeight;
-                _wordBreak = p.WordBreak;
-                _direction = p._direction;
+                WordBreak = p.WordBreak;
+                Direction = p.Direction;
 
                 if (everything)
                 {
-                    _backgroundColor = p._backgroundColor;
-                    _backgroundGradient = p._backgroundGradient;
-                    _backgroundGradientAngle = p._backgroundGradientAngle;
-                    _backgroundImage = p._backgroundImage;
-                    _backgroundPosition = p._backgroundPosition;
-                    _backgroundRepeat = p._backgroundRepeat;
+                    BackgroundColor = p.BackgroundColor;
+                    BackgroundGradient = p.BackgroundGradient;
+                    BackgroundGradientAngle = p.BackgroundGradientAngle;
+                    BackgroundImage = p.BackgroundImage;
+                    BackgroundPosition = p.BackgroundPosition;
+                    BackgroundRepeat = p.BackgroundRepeat;
                     _borderTopWidth = p._borderTopWidth;
                     _borderRightWidth = p._borderRightWidth;
                     _borderBottomWidth = p._borderBottomWidth;
@@ -1517,36 +1286,36 @@ namespace HtmlRendererCore.Core.Dom
                     _borderRightColor = p._borderRightColor;
                     _borderBottomColor = p._borderBottomColor;
                     _borderLeftColor = p._borderLeftColor;
-                    _borderTopStyle = p._borderTopStyle;
-                    _borderRightStyle = p._borderRightStyle;
-                    _borderBottomStyle = p._borderBottomStyle;
-                    _borderLeftStyle = p._borderLeftStyle;
+                    BorderTopStyle = p.BorderTopStyle;
+                    BorderRightStyle = p.BorderRightStyle;
+                    BorderBottomStyle = p.BorderBottomStyle;
+                    BorderLeftStyle = p.BorderLeftStyle;
                     _bottom = p._bottom;
-                    _cornerNwRadius = p._cornerNwRadius;
-                    _cornerNeRadius = p._cornerNeRadius;
-                    _cornerSeRadius = p._cornerSeRadius;
-                    _cornerSwRadius = p._cornerSwRadius;
+                    CornerNwRadius = p.CornerNwRadius;
+                    CornerNeRadius = p.CornerNeRadius;
+                    CornerSeRadius = p.CornerSeRadius;
+                    CornerSwRadius = p.CornerSwRadius;
                     _cornerRadius = p._cornerRadius;
-                    _display = p._display;
-                    _float = p._float;
-                    _height = p._height;
-                    _marginBottom = p._marginBottom;
-                    _marginLeft = p._marginLeft;
-                    _marginRight = p._marginRight;
-                    _marginTop = p._marginTop;
+                    Display = p.Display;
+                    Float = p.Float;
+                    Height = p.Height;
+                    MarginBottom = p.MarginBottom;
+                    MarginLeft = p.MarginLeft;
+                    MarginRight = p.MarginRight;
+                    MarginTop = p.MarginTop;
                     _left = p._left;
                     _lineHeight = p._lineHeight;
-                    _overflow = p._overflow;
+                    Overflow = p.Overflow;
                     _paddingLeft = p._paddingLeft;
                     _paddingBottom = p._paddingBottom;
                     _paddingRight = p._paddingRight;
                     _paddingTop = p._paddingTop;
                     _right = p._right;
-                    _textDecoration = p._textDecoration;
+                    TextDecoration = p.TextDecoration;
                     _top = p._top;
-                    _position = p._position;
-                    _width = p._width;
-                    _maxWidth = p._maxWidth;
+                    Position = p.Position;
+                    Width = p.Width;
+                    MaxWidth = p.MaxWidth;
                     _wordSpacing = p._wordSpacing;
                 }
             }
