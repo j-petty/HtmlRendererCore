@@ -6,11 +6,10 @@ using HtmlRendererCore.Core;
 using HtmlRendererCore.Core.Entities;
 using HtmlRendererCore.Core.Utils;
 using HtmlRendererCore.PdfSharp.Adapters;
-using HtmlRendererCore.PdfSharp.Abstractions;
 
 namespace HtmlRendererCore.PdfSharp
 {
-    public class PdfGenerator : IPdfGenerator
+    public static class PdfGenerator
     {
         /// <summary>
         /// Adds a font mapping from <paramref name="fromFamily"/> to <paramref name="toFamily"/> iff the <paramref name="fromFamily"/> is not found.<br/>
@@ -22,7 +21,7 @@ namespace HtmlRendererCore.PdfSharp
         /// </remarks>
         /// <param name="fromFamily">the font family to replace</param>
         /// <param name="toFamily">the font family to replace with</param>
-        public void AddFontFamilyMapping(string fromFamily, string toFamily)
+        public static void AddFontFamilyMapping(string fromFamily, string toFamily)
         {
             ArgChecker.AssertArgNotNullOrEmpty(fromFamily, "fromFamily");
             ArgChecker.AssertArgNotNullOrEmpty(toFamily, "toFamily");
@@ -39,7 +38,7 @@ namespace HtmlRendererCore.PdfSharp
         /// <param name="stylesheet">the stylesheet source to parse</param>
         /// <param name="combineWithDefault">true - combine the parsed css data with default css data, false - return only the parsed css data</param>
         /// <returns>the parsed css data</returns>
-        public CssData ParseStyleSheet(string stylesheet, bool combineWithDefault = true)
+        public static CssData ParseStyleSheet(string stylesheet, bool combineWithDefault = true)
         {
             return CssData.Parse(PdfSharpAdapter.Instance, stylesheet, combineWithDefault);
         }
@@ -54,7 +53,7 @@ namespace HtmlRendererCore.PdfSharp
         /// <param name="stylesheetLoad">optional: can be used to overwrite stylesheet resolution logic</param>
         /// <param name="imageLoad">optional: can be used to overwrite image resolution logic</param>
         /// <returns>the generated image of the html</returns>
-        public PdfDocument GeneratePdf(string html, PageSize pageSize, int margin = 20, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
+        public static PdfDocument GeneratePdf(string html, PageSize pageSize, int margin = 20, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
         {
             var config = new PdfGenerateConfig();
             config.PageSize = pageSize;
@@ -71,7 +70,7 @@ namespace HtmlRendererCore.PdfSharp
         /// <param name="stylesheetLoad">optional: can be used to overwrite stylesheet resolution logic</param>
         /// <param name="imageLoad">optional: can be used to overwrite image resolution logic</param>
         /// <returns>the generated image of the html</returns>
-        public PdfDocument GeneratePdf(string html, PdfGenerateConfig config, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
+        public static PdfDocument GeneratePdf(string html, PdfGenerateConfig config, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
         {
             // create PDF document to render the HTML into
             var document = new PdfDocument();
@@ -93,7 +92,7 @@ namespace HtmlRendererCore.PdfSharp
         /// <param name="stylesheetLoad">optional: can be used to overwrite stylesheet resolution logic</param>
         /// <param name="imageLoad">optional: can be used to overwrite image resolution logic</param>
         /// <returns>the generated image of the html</returns>
-        public void AddPdfPages(PdfDocument document, string html, PageSize pageSize, int margin = 20, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
+        public static void AddPdfPages(PdfDocument document, string html, PageSize pageSize, int margin = 20, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
         {
             var config = new PdfGenerateConfig();
             config.PageSize = pageSize;
@@ -111,7 +110,7 @@ namespace HtmlRendererCore.PdfSharp
         /// <param name="stylesheetLoad">optional: can be used to overwrite stylesheet resolution logic</param>
         /// <param name="imageLoad">optional: can be used to overwrite image resolution logic</param>
         /// <returns>the generated image of the html</returns>
-        public void AddPdfPages(PdfDocument document, string html, PdfGenerateConfig config, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
+        public static void AddPdfPages(PdfDocument document, string html, PdfGenerateConfig config, CssData cssData = null, EventHandler<HtmlStylesheetLoadEventArgs> stylesheetLoad = null, EventHandler<HtmlImageLoadEventArgs> imageLoad = null)
         {
             XSize orgPageSize;
             // get the size of each page to layout the HTML in
@@ -162,6 +161,7 @@ namespace HtmlRendererCore.PdfSharp
 
                         using (var g = XGraphics.FromPdfPage(page))
                         {
+                            //g.IntersectClip(new XRect(config.MarginLeft, config.MarginTop, pageSize.Width, pageSize.Height));
                             g.IntersectClip(new XRect(0, 0, page.Width, page.Height));
 
                             container.ScrollOffset = new XPoint(0, scrollOffset);
@@ -183,7 +183,7 @@ namespace HtmlRendererCore.PdfSharp
         /// <summary>
         /// Handle HTML links by create PDF Documents link either to external URL or to another page in the document.
         /// </summary>
-        private void HandleLinks(PdfDocument document, HtmlContainer container, XSize orgPageSize, XSize pageSize)
+        private static void HandleLinks(PdfDocument document, HtmlContainer container, XSize orgPageSize, XSize pageSize)
         {
             foreach (var link in container.GetLinks())
             {
