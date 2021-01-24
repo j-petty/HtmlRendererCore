@@ -8,10 +8,16 @@ namespace HtmlRendererCore.PdfSharp.Tests
     [Trait("Category", "UnitTest")]
     public class PdfGeneratorTests
     {
+        private PdfGenerator GetPdfGenerator()
+        {
+            return new PdfGenerator();
+        }
+
         [Fact]
         public void GeneratePdf_Success()
         {
             // Arrange
+            var pdfGenerator = GetPdfGenerator();
             var html = @"
                 <html>
                     <body>
@@ -21,7 +27,7 @@ namespace HtmlRendererCore.PdfSharp.Tests
             ";
 
             // Act
-            var result = PdfGenerator.GeneratePdf(html, PdfSharpCore.PageSize.A4);
+            var result = pdfGenerator.GeneratePdf(html, PdfSharpCore.PageSize.A4);
 
             // Assert
             result.Should().NotBeNull();
@@ -31,6 +37,7 @@ namespace HtmlRendererCore.PdfSharp.Tests
         public void GeneratePdfBase64_Success()
         {
             // Arrange
+            var pdfGenerator = GetPdfGenerator();
             var html = @"
                 <html>
                     <body>
@@ -44,7 +51,7 @@ namespace HtmlRendererCore.PdfSharp.Tests
 
             using (var stream = new MemoryStream())
             {
-                var pdf = PdfGenerator.GeneratePdf(html, PdfSharpCore.PageSize.A4);
+                var pdf = pdfGenerator.GeneratePdf(html, PdfSharpCore.PageSize.A4);
 
                 pdf.Save(stream);
 
