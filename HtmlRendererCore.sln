@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore.PdfSharp", "HtmlRendererCore.PdfSharp\HtmlRendererCore.PdfSharp.csproj", "{CA16111D-A954-4B64-9F30-B918C6942733}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlRendererCore", "HtmlRendererCore\HtmlRendererCore.csproj", "{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70EF907B-FC9E-48B5-BACB-14F01CBF236A}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build.yml = .github\workflows\build.yml
@@ -38,18 +36,6 @@ Global
 		{CA16111D-A954-4B64-9F30-B918C6942733}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CA16111D-A954-4B64-9F30-B918C6942733}.Release|x86.ActiveCfg = Release|Any CPU
 		{CA16111D-A954-4B64-9F30-B918C6942733}.Release|x86.Build.0 = Release|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Debug|x86.Build.0 = Debug|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|x86.ActiveCfg = Release|Any CPU
-		{39B5BC5C-9CD1-4AF7-9705-CA000CF35F2F}.Release|x86.Build.0 = Release|Any CPU
 		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A14BEB51-47FA-46F6-A8B4-01555C2B5BBE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

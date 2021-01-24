@@ -14,12 +14,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PdfSharpCore" Version="1.2.11" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+    <None Remove="Core\Utils\ImageError.png" />
+    <None Remove="Core\Utils\ImageLoad.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HtmlRendererCore\HtmlRendererCore.csproj" />
+    <EmbeddedResource Include="Core\Utils\ImageError.png" />
+    <EmbeddedResource Include="Core\Utils\ImageLoad.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PdfSharpCore" Version="1.2.11" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
