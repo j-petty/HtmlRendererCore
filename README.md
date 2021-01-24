@@ -1,6 +1,6 @@
 # HtmlRendererCore
 [![NuGet version (HtmlRendererCore.PdfSharp)](https://img.shields.io/nuget/v/HtmlRendererCore.PdfSharp.svg?style=flat-square)](https://www.nuget.org/packages/HtmlRendererCore.PdfSharp/)
-![Publish Package](https://github.com/j-petty/HtmlRendererCore/workflows/Publish%20Package/badge.svg)
+![Build](https://github.com/j-petty/HtmlRendererCore/workflows/Build/badge.svg?branch=master)
 
 **HtmlRendererCore** is a partial port of [HtmlRenderer](https://github.com/ArthurHub/HTML-Renderer) for .NET Core.
 
